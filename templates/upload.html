@@ -1,0 +1,20 @@
+<!doctype html>
+<title>File Upload</title>
+<h2>Select file to upload</h2>
+
+<h1 id='result'/>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+	<input type="file" name="filename">
+	<input type="submit" name="Upload">
+</form>
+
+<script>
+	var l = {{label}}
+	var res = document.getElementById('result');
+	if(l == 0){
+		res.innerHTML = 'It is a cat'
+	} else{
+		res.innerHTML = 'It is a dog'
+	}
+</script>
